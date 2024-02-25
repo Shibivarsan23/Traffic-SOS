@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Form</title>
+    <style>
+        /* You can place your CSS styles here */
+        body {
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>SOS form</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>Policeman Name</td>
+                    <td><input type="text" name="policeman_name" placeholder="Enter Policeman's Name"></td>
+                </tr>
+                <tr>
+                    <td>Violators Type</td>
+                    <td><input type="text" name="violator_type" placeholder="Enter Violator's Type"></td>
+                </tr>
+                <tr>
+                    <td>What help do you need?</td>
+                    <td><input type="text" name="help_needed" placeholder="Enter Details"></td>
+                </tr>
+            </table>
+        
+            <div class="buttons">
+                <button id="sub" onclick="submitForm()">SEND</button>
+                <button id="res" onclick="resetForm()">Reset</button>
+        
+                <button id="sub" onclick="forms"><a href="./location.html">Location</a></button>
+            </div>
+        </form>
+    </center>
+
+    <script>
+        // JavaScript functions to handle form submission and reset
+        function submitForm() {
+            // You can add JavaScript logic here to submit the form data
+            alert("Form submitted!");
+        }
+
+        function resetForm() {
+            document.querySelector('form').reset(); // Reset the form
+        }
+    </script>
+</body>
+</html>
+<style>
+    body{
+        background-image: url("tt.jpg");
+        background-repeat: no-repeat;
+    }
+</style>

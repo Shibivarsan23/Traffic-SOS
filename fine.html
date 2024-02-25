@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Setup</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("tt.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: rgb(100, 151, 167);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #df2c2c;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        p {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <input id="num1" placeholder="Enter fine amount">
+        <input id="num2">
+        <button onclick="calculateAndSend()">Calculate</button>
+        <p id="res">Result</p>
+    </div>
+
+    <script>
+        var a = document.getElementById("num1");
+        var b = document.getElementById("num2");
+        var result = document.getElementById("res");
+
+        function calculateAndSend() {
+            var avalue = Number(a.value);
+            var bvalue = Number(b.value);
+            var d="Message from Traffic rules Safety you are fined rs:  " ;
+            var e=" for your mistake so ";
+            var z=avalue+bvalue
+            var y= "you have to pay within 7 days through online or offline";
+            var n="https://echallan.parivahan.gov.in/index/accused-challan"
+            var t = d+z+e+y+n
+            
+            result.textContent = "your fine amount is :"+t+" you have to pay within 7 days";
+
+            // Sending the result to the server
+            fetch('http://localhost:3000/call-node-function', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    pass: t
+                })
+            })
+            .then(response => {
+                // Handle the response from the server if needed
+                console.log("Result sent successfully");
+            })
+            .catch(error => {
+                console.error("Error sending result:", error);
+            });
+        }
+    </script>
+</body>
+</html>
+
+    <script src="./server.js"></script>
+

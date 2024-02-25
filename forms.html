@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Rules Form</title>
+    <style>
+        body {
+            background-image: url("tt.jpg");
+            background-repeat: no-repeat;
+         background-position: right top;
+        }
+        ::placeholder {
+            color: brown;
+        }
+        select {
+            font-family: cursive;
+            font-size: medium;
+            color: brown;
+        }
+        td {
+            font-size: 20px;
+            color: black;
+            opacity: .7;
+            margin-left: 10%;
+        }
+        form {
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1 style="font-family: cursive;">Traffic rules form</h1>
+        <form>
+            <table>
+                <tr>
+                    <td style="font-family: cursive;">Violators Name</td>
+                    <td><input style="font-family: cursive;" type="text" placeholder="Enter name"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Violators Type</td>
+                    <td><input style="font-family: cursive;" type="text" placeholder="Type of incident"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Driving licence</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Vehicle Type</td>
+                    <td style="font-family: cursive;">
+                        <input type="radio" name="vehicle">Car
+                        <input type="radio" name="vehicle">Bike
+                        <input type="radio" name="vehicle">Lorry
+                        <input type="radio" name="vehicle">Reg Number
+                        <input type="radio" name="vehicle">Taxi
+                        <input type="radio" name="vehicle">Private Vehicle
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Upload Vehicle Photo</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Police Officer Name</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Address</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Vehicle Number</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Phone Number</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Fine Amount</td>
+                    <td><input type="number" style="font-family: cursive;"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Reason for Arrest</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td style="font-family: cursive;">Pincode</td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <div class="buttons" style="text-align: center; margin-top: 20px;">
+        <button id="sub" onclick="pic"><a href="./pic.html">Submit</a></button>
+        <button id="res" onclick="reset()">Reset</button>
+    </div>
+</body>
+</html>

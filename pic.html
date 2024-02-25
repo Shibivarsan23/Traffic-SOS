@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fine Payment</h1>
+        <form>
+            <label for="VechicleNumber"> Enter Vechicle Number:</label>
+            <input type="number" id="cardNumber" name="cardNumber" required>
+            
+            <label for="expiryDate">Issue Date:</label>
+            <input type="date" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+            
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="date" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+           
+            <label for="expiryDate">Reason:</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder= required>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount"  required>
+            
+            <button id="sub" onclick="forms"><a href="./fine.html">pay</a></button>
+        </form>
+    </div>
+</body>
+</html>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>

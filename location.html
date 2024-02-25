@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Location</title>
+</head>
+<body>
+    <center>
+    <h1>User Location</h1>
+    <p id="location"></p>
+
+    <script src="script.js"></script>
+    <div class="buttons">
+        <button id="sub" onclick="submitForm()">SEND</button>
+    </div>
+</body>
+</html>
+
+<script>
+    function submitForm() {
+            // You can add JavaScript logic here to submit the form data
+            alert("Location shared!");
+        }
+document.addEventListener("DOMContentLoaded", function() {
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            var locationElement = document.getElementById("location");
+            locationElement.innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+        });
+    } else {
+        alert("Geolocation is not supported by your browser.");
+    }
+    
+
+        
+
+});</script>
+</center>
+
+<style>
+    body {
+            background-image: url("map.jpg");
+            background-repeat: no-repeat;
+         background-position: right top;
+        }
+</style>
